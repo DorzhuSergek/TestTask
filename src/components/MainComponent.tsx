@@ -15,8 +15,6 @@ export interface Quotes {
 
 function MainComponent(props: PropTypes) {
   const [like, setLike] = useState(0);
-  localStorage.setItem("like", like.toString());
-  let likeSave = localStorage.getItem("like");
   return (
     <div className="container">
       <div>
@@ -27,7 +25,7 @@ function MainComponent(props: PropTypes) {
             <div>{props.character.tags[0]}</div>
             <div>{props.character.tags[1]}</div>
           </div>
-          <div>{likeSave}</div>
+          <div>{like}</div>
           <button onClick={() => setLike(like + 1)}>Like</button>
         </div>
       </div>
