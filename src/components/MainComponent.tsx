@@ -14,7 +14,8 @@ export interface Quotes {
 }
 
 function MainComponent(props: PropTypes) {
-  const [like, setLike] = useState(0);
+  let [like, setLike] = useState(0);
+
   return (
     <div className="container">
       <div>

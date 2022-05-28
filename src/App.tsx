@@ -28,12 +28,10 @@ function App() {
       <div className="container--header">
         <div>
           <input
-            placeholder="search"
+            placeholder="search by content"
             onChange={(event) => setSearch(event.target.value)}
           />
         </div>
-        <button onClick={() => setPage(page - 1)}>Back Page</button>
-        <button onClick={() => setPage(page + 1)}>Next Page</button>
       </div>
       <div>
         {filteredData.length > 0 &&
@@ -41,6 +39,8 @@ function App() {
             return <MainComponent character={item} key={index} />;
           })}
       </div>
+      <button onClick={() => setPage(page - 1)}>Back Page</button>
+      <button onClick={() => setPage(page + 1)}>Next Page</button>
     </div>
   );
 }
