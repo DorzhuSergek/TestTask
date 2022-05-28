@@ -1,0 +1,33 @@
+.author {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+.content {
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 14px;
+  padding: 0px 5px 10px 0px;
+  line-height: 21px;
+}
+.container {
+  display: block;
+  align-items: flex-start;
+  word-wrap: break-word;
+}
+.quote {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px;
+  text-align: left;
+}
+.tag {
+  color: #00635d;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  display: flex;
+}
