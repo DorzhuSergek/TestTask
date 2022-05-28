@@ -1,4 +1,3 @@
-import axios, { AxiosResponse } from "axios";
 import React, { useEffect, useState } from "react";
 import "./MainComponent.css";
 
@@ -15,7 +14,17 @@ export interface Quotes {
 
 function MainComponent(props: PropTypes) {
   let [like, setLike] = useState(0);
-
+  let saveLike = "0";
+  async function saveItem(key: string, value: string) {
+    localStorage.setItem(key, value);
+  }
+  async function getItem(key: string) {
+    saveLike = JSON.parse(localStorage.getItem(key) || "");
+  }
+  useEffect(() => {
+    saveItem("like", like.toString());
+    getItem("like");
+  }, [like]);
   return (
     <div className="container">
       <div>
